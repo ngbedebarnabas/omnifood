@@ -48,7 +48,7 @@ body {
 /**************************
 GENERAL REUSABLE COMPONENTS
 ***************************/
-
+.btn,
 .btn:link,
 .btn:visited {
   text-decoration: none;
@@ -56,7 +56,11 @@ GENERAL REUSABLE COMPONENTS
   padding: 1.6rem 3.2rem;
   display: inline-block;
   font-size: 2rem;
-  border-radius: 9px;
+
+  /* only for btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 
   /* add animation on the original state */
   transition: all 0.3s;
