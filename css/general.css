@@ -104,6 +104,25 @@ GENERAL REUSABLE COMPONENTS
   border-bottom: 1px solid transparent;
 }
 
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  border-radius: 9px;
+  align-self: end;
+  padding: 1.2rem;
+}
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
+}
+
+*:focus {
+  outline: none;
+  /* outline: 4px dotted #e67e22;
+  outline-offset: ; */
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
+
 .margin-right-sm {
   margin-right: 1.6rem !important;
 }
@@ -151,6 +170,10 @@ strong {
 .grid-4-cols {
   grid-template-columns: repeat(4, 1fr);
 }
+.grid-5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
 .grid-center-v {
   align-items: center;
 }

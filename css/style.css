@@ -466,9 +466,6 @@ CTA SECTION
   border-radius: 15px;
 
   background-image: linear-gradient(to right bottom, #e98b38, #e67e22);
-
-  /* Temporary */
-  height: 50rem;
 }
 
 .cta-text-box {
@@ -526,5 +523,17 @@ CTA SECTION
   color: #aaa;
 }
 
-.cta-form button {
+.cta *:focus {
+  outline: none;
+  /* outline: 4px dotted #e67e22;
+  outline-offset: ; */
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+
+/***************************
+FOOTER SECTION
+*************************** */
+
+.footer {
+  padding: 9.6rem 0;
 }
