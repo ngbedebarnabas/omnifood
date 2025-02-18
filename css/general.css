@@ -29,6 +29,7 @@ FONT SIZE SYSTEM (px)
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 * {
@@ -40,6 +41,7 @@ html {
 body {
   font-family: "Rubik", sans-serif;
   line-height: 1;
+  overflow-x: hidden;
 
   font-weight: 400;
   color: #555;
