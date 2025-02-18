@@ -54,6 +54,17 @@ HEADER
 .main-nav-link.nav-cta:hover {
   background-color: #cf711f;
 }
+
+.btn-mobile-nav{
+border: none;
+cursor: pointer;
+background: none;
+}
+
+.icon-mobile-nav {
+
+}
+
 /***************************
 HERO SECTION
 *************************** */
@@ -284,6 +295,7 @@ MEALS SECTION
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  line-height: 1.2;
 }
 
 .list-icon {
