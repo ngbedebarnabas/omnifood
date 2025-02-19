@@ -23,16 +23,45 @@ allLinks.forEach( (link) => {
         const href = link.getAttribute('href')
         // console.log(href)
         
+        // scroll to top
         if (href === "#") window.scrollTo({
             top: 0,
             behavior: "smooth"
         });
+
+        // scroll to other links
         if (href !== "#" && href.startsWith("#")) {
             const sectionEl = document.querySelector(href);
             sectionEl.scrollIntoView({behavior: "smooth"});
         }
+
+        // close mobile navigation
+        if (link.classList.contains("main-nav-link")) {
+            headerEl.classList.toggle("nav-open");
+        }
     })
 })
+
+
+// Adding the sticky class to the navigation
+const sectionHero = document.querySelector(".section-hero");
+const theObserver = new IntersectionObserver((entries) => {
+    const ent = entries[0];
+    if (!ent.isIntersecting ) {
+        document.body.classList.add('sticky');
+    }
+    if (ent.isIntersecting) {
+        document.body.classList.remove('sticky');
+    }
+ }, {
+    // in the viewport
+    root: null,
+    threshold: 0,
+    rootMargin: "-80px"
+});
+theObserver.observe(sectionHero);
+
+
 
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
