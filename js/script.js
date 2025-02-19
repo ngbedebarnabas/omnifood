@@ -10,11 +10,29 @@ yearEl.textContent = currYear;
 const mobileMenu = document.querySelector('.btn-mobile-nav');
 const headerEl = document.querySelector('.header');
 
-
 mobileMenu.addEventListener('click', () => {
     headerEl.classList.toggle('nav-open');
 })
 
+// FIXING SMOOTH SCROLL ON SAFARI BROWSERS
+
+const allLinks = document.querySelectorAll('a:link');
+allLinks.forEach( (link) => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const href = link.getAttribute('href')
+        // console.log(href)
+        
+        if (href === "#") window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+        if (href !== "#" && href.startsWith("#")) {
+            const sectionEl = document.querySelector(href);
+            sectionEl.scrollIntoView({behavior: "smooth"});
+        }
+    })
+})
 
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
