@@ -171,7 +171,6 @@ FEATURED IN
 
 .logos {
   display: flex;
-
   justify-content: space-around;
 }
 
@@ -392,7 +391,7 @@ TESTIMONIALS SECTION
 
 /***************************
 MEALS SECTION
-*************************** */
+****************************/
 
 .section-pricing {
   padding: 9.6rem 0;
@@ -401,6 +400,9 @@ MEALS SECTION
   border-radius: 11px;
 
   width: 75%;
+}
+.not-available{
+  text-decoration: line-through;
 }
 
 .pricing-plan--starter {
